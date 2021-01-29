@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1232068801166046854
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232068801166046585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb1ebd0ed8ebd14986cc3286ccd87d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 38b7ff49e58c2bb48ba60846aed741fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
@@ -158,11 +158,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232068801166046585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 054a239bdf9920f4bab00e4656889ded, type: 3}
+  m_Script: {fileID: 11500000, guid: 290303c2431de7843b216f02ebb3caab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arrow: {fileID: 202107682841165354, guid: adc1d7b1d4ee3b4488028b4071714409, type: 3}
-  rb: {fileID: 0}
+  Arrow: {fileID: 202107682841165354, guid: 6172208e9cca7cf4ea2d3b053a32b823, type: 3}
+  rb: {fileID: 1232068801166046854}
   cooldown: 1
 --- !u!95 &457934544
 Animator:
@@ -172,9 +172,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232068801166046585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75073d53badcddb4b81bc57907b4142a, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
