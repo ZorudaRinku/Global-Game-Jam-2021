@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1232068801166046853}
   - component: {fileID: 1232068801166046852}
-  - component: {fileID: 1232068801166046855}
   - component: {fileID: 1232068801166046854}
   - component: {fileID: 1232068801166046850}
   - component: {fileID: 1232068801166046851}
+  - component: {fileID: 3325279292106411722}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1232068801166046855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232068801166046585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae3b80160ce1fd43880445fa40b9a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 1232068801166046854}
-  movement: {x: 0, y: 0}
 --- !u!50 &1232068801166046854
 Rigidbody2D:
   serializedVersion: 4
@@ -157,8 +142,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232068801166046585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fbece5222e03f3488632bc2f9641607, type: 3}
+  m_Script: {fileID: 11500000, guid: dd2a7e0e44c05fa45ae81cc969ebe9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arrow: {fileID: 202107682841165354, guid: 3a78ae4fc776fdf4da19f361c448b909, type: 3}
+  moveSpeed: 5
+  rb: {fileID: 1232068801166046854}
+  movement: {x: 0, y: 0}
+--- !u!114 &3325279292106411722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232068801166046585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054a239bdf9920f4bab00e4656889ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arrow: {fileID: 202107682841165354, guid: 1a27e4b5ce54b59448860adb6a068cb1, type: 3}
   rb: {fileID: 1232068801166046854}
