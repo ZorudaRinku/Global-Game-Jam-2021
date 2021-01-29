@@ -38,28 +38,28 @@ public class BowAndArrow : MonoBehaviour
             {
                 speed.x = -1f + x/2;
                 speed.y = y / 2;
-                rotation = -90;
+                rotation = 0;
                 offset.x = -this.GetComponent<Renderer>().bounds.size.x/2;
             }
             else if (rightx > 0) //Right
             {
                 speed.x = 1f + x/2;
                 speed.y = y / 2;
-                rotation = 90;
+                rotation = 180;
                 offset.x = this.GetComponent<Renderer>().bounds.size.x/2;
             }
             else if (righty < 0) //Down
             {
                 speed.y = -1f + y/2;
                 speed.x = x / 2;
-                rotation = 0;
+                rotation = 90;
                 offset.y = -this.GetComponent<Renderer>().bounds.size.y/2;
             }
             else if (righty > 0) //Up
             {
                 speed.y = 1f + y/2;
                 speed.x = x / 2;
-                rotation = 180;
+                rotation = -90;
                 offset.y = this.GetComponent<Renderer>().bounds.size.y/2;
             }
 
