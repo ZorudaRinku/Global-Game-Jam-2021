@@ -1,7 +1,23 @@
 ﻿
+<<<<<<< Updated upstream
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{ecfba1e6-20c3-0004-13c4-f0d32f50959a}"
+=======
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Runtime", "Unity.2D.Animation.Samples.Runtime.csproj", "{6641AEA8-2AC5-80B0-D522-2F3F881B9D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E6A1FBEC-C320-0400-13C4-F0D32F50959A}"
+>>>>>>> Stashed changes
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect.Samples", "Unity.2D.PixelPerfect.Samples.csproj", "{F3503387-36C7-315C-B385-F20677D07B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Dependency", "Unity.2D.Animation.Samples.Dependency.csproj", "{DBD77975-342D-393B-FA46-9F8C46E789DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Samples.Editor", "Unity.2D.Animation.Samples.Editor.csproj", "{5C78EBAA-9848-50F2-2561-1AAF6D413BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect.Samples.Editor", "Unity.2D.PixelPerfect.Samples.Editor.csproj", "{300D38BA-A648-A1DD-3157-13B8826B56BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +25,37 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< Updated upstream
 		{ecfba1e6-20c3-0004-13c4-f0d32f50959a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ecfba1e6-20c3-0004-13c4-f0d32f50959a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ecfba1e6-20c3-0004-13c4-f0d32f50959a}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ecfba1e6-20c3-0004-13c4-f0d32f50959a}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{6641AEA8-2AC5-80B0-D522-2F3F881B9D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6641AEA8-2AC5-80B0-D522-2F3F881B9D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6641AEA8-2AC5-80B0-D522-2F3F881B9D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6641AEA8-2AC5-80B0-D522-2F3F881B9D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A1FBEC-C320-0400-13C4-F0D32F50959A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A1FBEC-C320-0400-13C4-F0D32F50959A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A1FBEC-C320-0400-13C4-F0D32F50959A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A1FBEC-C320-0400-13C4-F0D32F50959A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3503387-36C7-315C-B385-F20677D07B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3503387-36C7-315C-B385-F20677D07B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3503387-36C7-315C-B385-F20677D07B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3503387-36C7-315C-B385-F20677D07B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD77975-342D-393B-FA46-9F8C46E789DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD77975-342D-393B-FA46-9F8C46E789DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD77975-342D-393B-FA46-9F8C46E789DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD77975-342D-393B-FA46-9F8C46E789DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C78EBAA-9848-50F2-2561-1AAF6D413BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C78EBAA-9848-50F2-2561-1AAF6D413BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C78EBAA-9848-50F2-2561-1AAF6D413BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C78EBAA-9848-50F2-2561-1AAF6D413BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300D38BA-A648-A1DD-3157-13B8826B56BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300D38BA-A648-A1DD-3157-13B8826B56BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300D38BA-A648-A1DD-3157-13B8826B56BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300D38BA-A648-A1DD-3157-13B8826B56BA}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
