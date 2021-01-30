@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: ca8c08d925588df41a4094680e76c23a
+guid: d9731b4a509bae849957bedcb6eed802
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6237726533569932750
-    second: archerWalkDown_0
+      213: 5405490130120735391
+    second: archerattackL_0
   - first:
-      213: 2062796641043897260
-    second: archerWalkDown_1
+      213: -6203812922915903351
+    second: archerattackL_1
   - first:
-      213: -2719713825791539335
-    second: archerWalkDown_2
+      213: 1856988583768285256
+    second: archerattackL_2
   - first:
-      213: 1503966613520757642
-    second: archerWalkDown_3
+      213: 2123921200376623248
+    second: archerattackL_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,70 +103,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: archerWalkDown_0
+      name: archerattackL_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 232198044c42f69a0800000000000000
-      internalID: -6237726533569932750
+      spriteID: f9af9b242a8240b40800000000000000
+      internalID: 5405490130120735391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerWalkDown_1
+      name: archerattackL_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab5a49ad9680ac10800000000000000
-      internalID: 2062796641043897260
+      spriteID: 988ae9c0401a7e9a0800000000000000
+      internalID: -6203812922915903351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerWalkDown_2
+      name: archerattackL_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9770af26fa2a14ad0800000000000000
-      internalID: -2719713825791539335
+      spriteID: 840e677374955c910800000000000000
+      internalID: 1856988583768285256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerWalkDown_3
+      name: archerattackL_3
       rect:
         serializedVersion: 2
         x: 96
@@ -174,14 +174,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a83b3f8aaa92fd410800000000000000
-      internalID: 1503966613520757642
+      spriteID: 090be57241fa97d10800000000000000
+      internalID: 2123921200376623248
       vertices: []
       indices: 
       edges: []
