@@ -14,16 +14,17 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
+    private Player healthComponent;
    
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        healthComponent = this.GetComponent<Player>();
     }
     private void FixedUpdate()
     {
-        healthH = this.GetComponent<Player>().health;
+        healthH = healthComponent.health;
     }
     // Update is called once per frame
     void Update()
