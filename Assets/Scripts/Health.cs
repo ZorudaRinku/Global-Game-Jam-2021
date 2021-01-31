@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
@@ -32,7 +33,7 @@ public class Health : MonoBehaviour
         {
             if (i < health)
             {
-                if (i + 1 != numOfHearts)
+                if (i + 1 != math.ceil(health))
                 {
                     hearts[i].sprite = fullHeart;
                 } else
