@@ -77,7 +77,7 @@ public class BowAndArrow : MonoBehaviour
                 speed.y = 1.5f;
                 speed.x = x / 2;
                 rotation = -90;
-                offset.y = this.GetComponent<Renderer>().bounds.size.y/2 + 0.2f;
+                offset.y = this.GetComponent<Renderer>().bounds.size.y/2 + 0.1f;
             }
 
             if (arrow)

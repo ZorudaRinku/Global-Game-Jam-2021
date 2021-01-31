@@ -53,11 +53,20 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.name == "Stump")
         {
             Destroy(other.transform.GetChild(0).gameObject);
             stars++;
+        }
+    }
+    
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            health = health - .5f;
+
         }
     }
 }
