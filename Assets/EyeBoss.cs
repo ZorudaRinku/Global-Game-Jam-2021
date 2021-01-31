@@ -18,7 +18,13 @@ public class EyeBoss : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
+    {
+        if (health <= 0)
+        {
+            animator.SetBool("Death", true);
+            Destroy(this.gameObject, 1.5f);
+        }
+        
         Debug.Log(Vector3.Distance(transform.position, player.transform.position));
         if (Vector2.Distance(this.transform.position, player.transform.position) <= 15)
         {
@@ -44,7 +50,7 @@ public class EyeBoss : MonoBehaviour
     {
         if (awake)
         {
-            //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 1.0f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 120 * Time.deltaTime);
             Vector3 vectorToTarget = player.transform.position - transform.position;
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
