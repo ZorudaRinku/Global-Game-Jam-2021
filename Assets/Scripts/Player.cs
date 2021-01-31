@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 movement;
     public Animator animator;
+    public Image deathScreen;
 
     public GameObject Star1;
     public GameObject Star2;
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("Death", true);
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                deathScreen.gameObject.SetActive(true);
             }
         }
     }

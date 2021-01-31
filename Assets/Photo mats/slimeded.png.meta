@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: -8602826736411796694
     second: slimeded_2
+  - first:
+      213: 401987487980022444
+    second: slimeded_3
+  - first:
+      213: 8357565962541064611
+    second: slimeded_4
+  - first:
+      213: 5433092613888056509
+    second: slimeded_5
+  - first:
+      213: -1668703519864846783
+    second: slimeded_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -230,6 +242,90 @@ TextureImporter:
       bones: []
       spriteID: a2b11f7b9ae9c9880800000000000000
       internalID: -8602826736411796694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeded_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa63319d75249500800000000000000
+      internalID: 401987487980022444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeded_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1e72076f90cf370800000000000000
+      internalID: 8357565962541064611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeded_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc989252f8366b40800000000000000
+      internalID: 5433092613888056509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimeded_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14603076df297d8e0800000000000000
+      internalID: -1668703519864846783
       vertices: []
       indices: 
       edges: []

@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
         
         if (health <= 0)
         {
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 1.4f);
             animator.SetBool("Death", true);
         }
 
