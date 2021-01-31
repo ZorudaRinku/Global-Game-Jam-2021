@@ -27,9 +27,4 @@ public class RoomControl : MonoBehaviour
             //Tilemap.SetColor(, new Color(26, 26, 26, 255));
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        throw new NotImplementedException();
-    }
 }

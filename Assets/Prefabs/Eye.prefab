@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 1296622324093716057, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1296622324093716057, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1296622324093716057, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
@@ -117,6 +117,11 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
       value: 0.072467625
       objectReference: {fileID: 0}
+    - target: {fileID: 3398049816401953196, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bc54d6542c41e1b4aa9afab7f7ad7784, type: 2}
     - target: {fileID: 5440610616267541723, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: FullHp
@@ -155,6 +160,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ef077ae352d63834d9a2df0702722d92,
         type: 3}
+    - target: {fileID: 5705385032419569822, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5934949545467922611, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: m_RootOrder

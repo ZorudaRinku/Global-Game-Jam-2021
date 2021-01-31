@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: 192ed6e6135de3e4c8f9702f6861a49f
+guid: 948591a10c3568843a9c94c2fef95ae6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2788523123268592320
-    second: eye die_0
+      213: 3995354898788953487
+    second: littleeyehover_0
   - first:
-      213: -5304879045990656023
-    second: eye die_1
+      213: -3875092698107568316
+    second: littleeyehover_1
   - first:
-      213: -1443132911303322568
-    second: eye die_2
+      213: 3209580621698188647
+    second: littleeyehover_2
   - first:
-      213: 2372918321077856298
-    second: eye die_3
+      213: 8483989147135783365
+    second: littleeyehover_3
   - first:
-      213: -1467118759303085479
-    second: eye die_4
+      213: 7616028029265168515
+    second: littleeyehover_4
+  - first:
+      213: -379958324593741880
+    second: littleeyehover_5
+  - first:
+      213: 409684489838826010
+    second: littleeyehover_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eye die_0
+      name: littleeyehover_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ddc9d5efc2d49d0800000000000000
-      internalID: -2788523123268592320
+      spriteID: f8daee5bc1a527730800000000000000
+      internalID: 3995354898788953487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eye die_1
+      name: littleeyehover_1
       rect:
         serializedVersion: 2
         x: 32
@@ -141,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e750573d984166b0800000000000000
-      internalID: -5304879045990656023
+      spriteID: 44f9691e8b7e83ac0800000000000000
+      internalID: -3875092698107568316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eye die_2
+      name: littleeyehover_2
       rect:
         serializedVersion: 2
         x: 64
@@ -162,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83417126346f8fbe0800000000000000
-      internalID: -1443132911303322568
+      spriteID: 7654c420298ba8c20800000000000000
+      internalID: 3209580621698188647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eye die_3
+      name: littleeyehover_3
       rect:
         serializedVersion: 2
         x: 96
@@ -183,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a28acd804ac4ee020800000000000000
-      internalID: 2372918321077856298
+      spriteID: 5c13c41ed2f2db570800000000000000
+      internalID: 8483989147135783365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eye die_4
+      name: littleeyehover_4
       rect:
         serializedVersion: 2
         x: 128
@@ -204,8 +210,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9528d64f24fb3abe0800000000000000
-      internalID: -1467118759303085479
+      spriteID: 388c4c3242191b960800000000000000
+      internalID: 7616028029265168515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littleeyehover_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf2329baed1abaf0800000000000000
+      internalID: -379958324593741880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littleeyehover_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1294d67fdd7fa500800000000000000
+      internalID: 409684489838826010
       vertices: []
       indices: 
       edges: []
