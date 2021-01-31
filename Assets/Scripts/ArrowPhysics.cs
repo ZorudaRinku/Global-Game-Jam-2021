@@ -30,4 +30,11 @@ public class ArrowPhysics : MonoBehaviour
     {
         rb.MovePosition(rb.position + speed * moveSpeed * Time.fixedDeltaTime);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

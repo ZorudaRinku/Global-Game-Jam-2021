@@ -88,6 +88,7 @@ public class BowAndArrow : MonoBehaviour
                 Destroy(arrow, 5f);
             }
         }
+
     }
 
     public void set()

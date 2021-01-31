@@ -1,44 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
+using Unity.Mathematics;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float health = 3;
+    public float healthH = 3;
     public int numOfHearts = 3;
-
+    
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
-
+    private void FixedUpdate()
+    {
+        healthH = this.GetComponent<Player>().health;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (health > numOfHearts)
+        if (healthH > numOfHearts)
         {
-            health = numOfHearts;
+            healthH = numOfHearts;
         }
         
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if (i < healthH)
             {
-                if (i + 1 != math.ceil(health))
+                if (i + 1 != math.ceil(healthH))
                 {
                     hearts[i].sprite = fullHeart;
                 } else
                 {
-                    if (health % 1 == 0)
+                    if (healthH % 1 == 0)
                     {
                         hearts[i].sprite = fullHeart;
                     }
