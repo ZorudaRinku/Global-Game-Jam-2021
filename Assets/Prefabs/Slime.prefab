@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1296622324093716057, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296622324093716057, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5440610616267541723, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: Halfhp
@@ -33,6 +43,12 @@ PrefabInstance:
       propertyPath: randmin
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5705385032419569822, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3188020872773818557, guid: 3a139c80130d5f547ab86ecae503d782,
+        type: 3}
     - target: {fileID: 5934949545467922611, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
       propertyPath: m_RootOrder

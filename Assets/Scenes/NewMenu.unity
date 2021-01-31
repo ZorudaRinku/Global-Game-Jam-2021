@@ -2252,6 +2252,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5440610616267541723, guid: 310ce52cce6f1f34886060459c9a7e5e,
         type: 3}
+      propertyPath: FullHp
+      value: 
+      objectReference: {fileID: 21300000, guid: 6abbd2e2d5a4626439bbf775e896edd5,
+        type: 3}
+    - target: {fileID: 5440610616267541723, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
+      propertyPath: Halfhp
+      value: 
+      objectReference: {fileID: 21300000, guid: 6abbd2e2d5a4626439bbf775e896edd5,
+        type: 3}
+    - target: {fileID: 5440610616267541723, guid: 310ce52cce6f1f34886060459c9a7e5e,
+        type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1264634879}
@@ -2409,6 +2421,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351404720816734411, guid: 620876bf4e5fdbd42a033655b1bf5274,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351404720816734411, guid: 620876bf4e5fdbd42a033655b1bf5274,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00015258789
       objectReference: {fileID: 0}
     - target: {fileID: 4531874521418453322, guid: 620876bf4e5fdbd42a033655b1bf5274,
         type: 3}
