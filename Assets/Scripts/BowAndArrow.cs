@@ -53,31 +53,31 @@ public class BowAndArrow : MonoBehaviour
             
             if (rightx < 0) //Left
             {
-                speed.x = -1f;
+                speed.x = -1.5f;
                 speed.y = y / 2;
                 rotation = 0;
                 offset.x = -this.GetComponent<Renderer>().bounds.size.x/2;
             }
             else if (rightx > 0) //Right
             {
-                speed.x = 1f;
+                speed.x = 1.5f;
                 speed.y = y / 2;
                 rotation = 180;
                 offset.x = this.GetComponent<Renderer>().bounds.size.x/2;
             }
             else if (righty < 0) //Down
             {
-                speed.y = -1f;
+                speed.y = -1.5f;
                 speed.x = x / 2;
                 rotation = 90;
                 offset.y = -this.GetComponent<Renderer>().bounds.size.y/2;
             }
             else if (righty > 0) //Up
             {
-                speed.y = 1f;
+                speed.y = 1.5f;
                 speed.x = x / 2;
                 rotation = -90;
-                offset.y = this.GetComponent<Renderer>().bounds.size.y/2 + 0.5f;
+                offset.y = this.GetComponent<Renderer>().bounds.size.y/2 + 0.2f;
             }
 
             if (arrow)

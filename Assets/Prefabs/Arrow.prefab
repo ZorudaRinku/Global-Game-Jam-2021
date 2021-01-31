@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 202107682841165352}
   - component: {fileID: 7889065968231495213}
   - component: {fileID: 7779805549915601857}
+  - component: {fileID: 1175581678822212040}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202107682841165354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.052, y: -0.788, z: -1.3749018}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -0.052, y: -0.788, z: -2}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,3 +121,30 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 7889065968231495213}
   speed: {x: 0, y: 0}
+--- !u!68 &1175581678822212040
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202107682841165354}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.8133319, y: 0.07150817}
+  - {x: 1.0047287, y: 0.31239986}
+  - {x: -0.6104088, y: 0.31526637}
+  - {x: -1.0432479, y: 0.06573057}
+  - {x: -0.62740666, y: -0.19395542}
+  - {x: 0.99956244, y: -0.186656}
+  - {x: 0.8085318, y: 0.06501937}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
