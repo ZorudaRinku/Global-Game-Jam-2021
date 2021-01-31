@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public AudioSource audioSource;
     public float moveSpeed = 5f;
     public float attackSpeed = 5f;
     public float health = 3f;
@@ -37,12 +38,9 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         
-        if (!animator.GetBool("Death"))
-        {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
         Star1Image.sprite = Images[Mathf.Clamp(stars, 0, 5)];
         Star2Image.sprite = Images[Mathf.Clamp(stars + 1, 6, 13)];
@@ -58,8 +56,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.name == "Stump")
         {
+            AudioManager.Instance.PlayOneShot(SoundEffect.Star);
             Destroy(other.transform.GetChild(0).gameObject);
             stars++;
+
         }
     }
     
@@ -69,11 +69,7 @@ public class Player : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             health = health - .5f;
-            if (health <= 0)
-            {
-                animator.SetBool("Death", true);
-                rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            }
+
         }
     }
 }
