@@ -1,0 +1,13 @@
+{
+  "sdk": {
+    "includePrerelease": false
+  },
+  "msbuild": {
+    "useBundledOnly": true
+  },
+  "RoslynExtensionsOptions": {
+    "EnableAnalyzersSupport": true,
+    "EnableImportCompletion": true,
+    "EnableDecompilationSupport": true
+  }
+}
