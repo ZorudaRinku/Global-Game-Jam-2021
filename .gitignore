@@ -491,3 +491,8 @@ MigrationBackup/
 /[Ll]ibrary/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,rider,unity
+
+.vscode/
+.idea/
+.vsconfig
+build/
