@@ -6,7 +6,7 @@ public class Menu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene("NewMenu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
     {
@@ -18,6 +18,6 @@ public class Menu : MonoBehaviour
     }
     public void ReturnMenu()
     {
-        SceneManager.LoadScene("Main_Menu");
+        SceneManager.LoadScene(0);
     }
 }
