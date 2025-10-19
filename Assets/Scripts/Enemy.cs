@@ -84,6 +84,8 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject, 1.4f);
             animator.SetBool("Death", true);
+            ourbody.linearVelocity = Vector2.zero;
+            GetComponent<Collider2D>().enabled = false;
         }
 
     }
