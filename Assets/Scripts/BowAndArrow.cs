@@ -46,7 +46,6 @@ public class BowAndArrow : MonoBehaviour
             var movement = this.GetComponent<Player>().movement;
             var x = movement.x;
             var y = movement.y;
-            speed = Vector2.zero;
             arrow = Instantiate(Arrow);
             var rotation = 0;
             Vector2 offset = new Vector2(0, 0);
@@ -84,8 +83,8 @@ public class BowAndArrow : MonoBehaviour
             {
                 arrow.transform.position = new Vector3(this.transform.position.x + offset.x, this.transform.position.y + offset.y, this.transform.position.z);
                 arrow.transform.eulerAngles = new Vector3(arrow.transform.eulerAngles.x, arrow.transform.eulerAngles.y, arrow.transform.eulerAngles.x + rotation);
-                arrow.GetComponent<ArrowPhysics>().speed = speed;
-                Destroy(arrow, 5f);
+                arrow.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(rightx, righty).normalized * 10f;
+                //Destroy(arrow, 5f);
             }
         }
 
