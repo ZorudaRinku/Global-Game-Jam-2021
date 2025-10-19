@@ -32,7 +32,7 @@ public class ArrowPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.linearVelocity.magnitude <= 1f)
+        if (rb.linearVelocity.magnitude <= 2f)
         {
             Destroy(this.gameObject);
         }
@@ -46,9 +46,6 @@ public class ArrowPhysics : MonoBehaviour
     private void ApplyAerodynamicForces()
     {
         Vector2 velocity = rb.linearVelocity;
-        
-        // Don't apply forces if arrow is barely moving
-        if (velocity.magnitude < 0.1f) return;
         
         // Get arrow's forward direction (where it's pointing)
         Vector2 arrowForward = transform.right; // Assuming arrow points along negative X axis
@@ -69,17 +66,14 @@ public class ArrowPhysics : MonoBehaviour
         rb.AddForce(dragForce);
         
         // Apply stabilizing force to align arrow with velocity direction
-        if (velocity.magnitude > 1f) // Only stabilize when moving fast enough
-        {
-            Vector3 targetUp = new Vector3(velocityDirection.x, velocityDirection.y, 0);
-            Vector3 currentUp = transform.up;
-            
-            // Calculate the torque needed to align the arrow
-            Vector3 torqueAxis = Vector3.Cross(currentUp, targetUp);
-            float torqueMagnitude = torqueAxis.z * stabilizingForce * perpendicularFactor;
-            
-            rb.AddTorque(torqueMagnitude);
-        }
+        Vector3 targetUp = new Vector3(velocityDirection.x, velocityDirection.y, 0);
+        Vector3 currentUp = transform.up;
+        
+        // Calculate the torque needed to align the arrow
+        Vector3 torqueAxis = Vector3.Cross(currentUp, targetUp);
+        float torqueMagnitude = torqueAxis.z * stabilizingForce * perpendicularFactor;
+        
+        rb.AddTorque(torqueMagnitude);
         
         // Apply angular drag to prevent excessive spinning
         rb.angularVelocity *= (1f - angularDrag * Time.fixedDeltaTime);
