@@ -20,7 +20,7 @@ public class ArrowPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x <= 0 && rb.velocity.y <= 0)
+        if (rb.linearVelocity.x <= 0 && rb.linearVelocity.y <= 0)
         {
             //Destroy(this.gameObject);
         }

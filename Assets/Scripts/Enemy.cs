@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
                     transform.position += (displacement * speed * Time.deltaTime);
                 }
 
-                ourbody.velocity = new Vector3(Mathf.Clamp(displacement.x, -2f, 2f), Mathf.Clamp(displacement.y, -4, 4),
+                ourbody.linearVelocity = new Vector3(Mathf.Clamp(displacement.x, -2f, 2f), Mathf.Clamp(displacement.y, -4, 4),
                     0);
             }
         }
