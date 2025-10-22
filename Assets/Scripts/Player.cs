@@ -63,22 +63,18 @@ public class Player : MonoBehaviour
             //AudioManager.Instance.PlayOneShot(SoundEffect.Star);
             Destroy(other.transform.GetChild(0).gameObject);
             stars++;
-
         }
-    }
-    
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Enemy"))
+
+        if (other.gameObject.CompareTag("EnemyProjectile"))
         {
-            health = health - .5f;
-            
+            health -= 0.5f;
+            Destroy(other.gameObject);
+            //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerHurt);
             if (health <= 0)
             {
                 animator.SetBool("Death", true);
-                rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                deathScreen.gameObject.SetActive(true);
+                //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerDeath);
+                //deathScreen.enabled = true;
             }
         }
     }

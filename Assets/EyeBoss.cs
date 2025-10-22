@@ -29,7 +29,7 @@ public class EyeBoss : MonoBehaviour
             health = 25;
         }
         
-        Debug.Log(Vector3.Distance(transform.position, player.transform.position));
+        //Debug.Log(Vector3.Distance(transform.position, player.transform.position));
         if (Vector2.Distance(this.transform.position, player.transform.position) <= 15)
         {
             awake = true;
