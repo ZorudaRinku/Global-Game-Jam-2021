@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 movement;
     public Animator animator;
+    public float hitTimer = 0f;
     public Image deathScreen;
 
     public GameObject Star1;
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        
+
         if (!animator.GetBool("Death"))
         {
             animator.SetFloat("Horizontal", movement.x);
@@ -49,6 +50,11 @@ public class Player : MonoBehaviour
         Star1Image.sprite = Images[Mathf.Clamp(stars, 0, 5)];
         Star2Image.sprite = Images[Mathf.Clamp(stars + 1, 6, 13)];
         Star3Image.sprite = Images[Mathf.Clamp(stars + 2, 14, 23)];
+
+        if (hitTimer > 0)
+        {
+            hitTimer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -76,6 +82,24 @@ public class Player : MonoBehaviour
                 //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerDeath);
                 //deathScreen.enabled = true;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy" && hitTimer <= 0)
+        {
+            hitTimer = 1f; // 1 second invulnerability
+            health -= 1f;
+            //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerHurt);
+            if (health <= 0)
+            {
+                animator.SetBool("Death", true);
+                //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerDeath);
+                //deathScreen.enabled = true;
+            }
+
+            collision.gameObject.GetComponent<SlimeEnemy>().bounceback((Vector2)(transform.position - collision.transform.position).normalized);
         }
     }
 }
