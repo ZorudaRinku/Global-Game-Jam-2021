@@ -25,6 +25,12 @@ public class BowAndArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Don't shoot if dead
+        if (animator.GetBool("Death"))
+        {
+            return;
+        }
+
         GameObject arrow;
         var rightx = Input.GetAxisRaw("Right X");
         var righty = Input.GetAxisRaw("Right Y");

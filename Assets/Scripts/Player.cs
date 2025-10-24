@@ -57,7 +57,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (!animator.GetBool("Death"))
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     private void Die()
