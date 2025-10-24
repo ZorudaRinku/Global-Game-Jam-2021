@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     {
         if (!animator.GetBool("Death"))
         {
+            // Only update movement parameters in Player script
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
