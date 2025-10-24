@@ -105,11 +105,11 @@ public class SlimeEnemy : MonoBehaviour
         if (player == null) return;
 
         // Flip the sprite on Y axis based on direction facing 
-        if (rb.linearVelocity.x > 0.1f || agent.velocity.x > 0.1f)
+        if ((rb.linearVelocity.x > 0.1f && !agent.enabled) || (agent.velocity.x > 0.1f && agent.enabled))
         {
             transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
-        else if (rb.linearVelocity.x < -0.1f || agent.velocity.x < -0.1f)
+        else if ((rb.linearVelocity.x < -0.1f && !agent.enabled) || (agent.velocity.x < -0.1f && agent.enabled))
         {
             transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
         }

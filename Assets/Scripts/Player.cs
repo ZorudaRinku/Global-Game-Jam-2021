@@ -7,6 +7,14 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    // Delegate and event for player death
+    public delegate void PlayerDeathHandler();
+    public static event PlayerDeathHandler OnPlayerDeath;
+
+    // Delegate and event for star collection
+    public delegate void StarCollectedHandler(int totalStars);
+    public static event StarCollectedHandler OnStarCollected;
+
     public AudioSource audioSource;
     public float moveSpeed = 5f;
     public float attackSpeed = 5f;
@@ -16,11 +24,6 @@ public class Player : MonoBehaviour
     public Vector2 movement;
     public Animator animator;
     public float hitTimer = 0f;
-    public Image deathScreen;
-
-    public GameObject Star1;
-    public GameObject Star2;
-    public GameObject Star3;
     private Image Star1Image;
     private Image Star2Image;
     private Image Star3Image;
@@ -29,27 +32,21 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Star1Image = Star1.GetComponent<Image>();
-        Star2Image = Star2.GetComponent<Image>();
-        Star3Image = Star3.GetComponent<Image>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
         if (!animator.GetBool("Death"))
         {
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
 
-        Star1Image.sprite = Images[Mathf.Clamp(stars, 0, 5)];
-        Star2Image.sprite = Images[Mathf.Clamp(stars + 1, 6, 13)];
-        Star3Image.sprite = Images[Mathf.Clamp(stars + 2, 14, 23)];
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
 
         if (hitTimer > 0)
         {
@@ -62,13 +59,22 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    private void Die()
+    {
+        animator.SetBool("Death", true);
+        rb.linearVelocity = Vector2.zero;
+        movement = Vector2.zero;
+        OnPlayerDeath?.Invoke();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Stump")
+        if (other.CompareTag("Star") && other.transform.childCount > 0)
         {
             //AudioManager.Instance.PlayOneShot(SoundEffect.Star);
             Destroy(other.transform.GetChild(0).gameObject);
             stars++;
+            OnStarCollected?.Invoke(stars);
         }
 
         if (other.gameObject.CompareTag("EnemyProjectile"))
@@ -78,9 +84,7 @@ public class Player : MonoBehaviour
             //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerHurt);
             if (health <= 0)
             {
-                animator.SetBool("Death", true);
-                //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerDeath);
-                //deathScreen.enabled = true;
+                Die();
             }
         }
     }
@@ -94,9 +98,7 @@ public class Player : MonoBehaviour
             //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerHurt);
             if (health <= 0)
             {
-                animator.SetBool("Death", true);
-                //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerDeath);
-                //deathScreen.enabled = true;
+                Die();
             }
 
             collision.gameObject.GetComponent<SlimeEnemy>().bounceback((Vector2)(transform.position - collision.transform.position).normalized);
