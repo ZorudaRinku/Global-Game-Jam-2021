@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     private Image Star3Image;
     public Sprite[] Images;
 
+    private Vector2 lastDirection = Vector2.down; // Default facing direction
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,13 +42,21 @@ public class Player : MonoBehaviour
     {
         if (!animator.GetBool("Death"))
         {
-            // Only update movement parameters in Player script
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
-
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
+
+            // Store last direction when moving
+            if (movement.sqrMagnitude > 0.01f)
+            {
+                lastDirection = movement.normalized;
+            }
+
+            // Use last direction when idle, current movement when moving
+            Vector2 animDirection = movement.sqrMagnitude > 0.01f ? movement : lastDirection;
+
+            animator.SetFloat("Horizontal", animDirection.x);
+            animator.SetFloat("Vertical", animDirection.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
         }
 
         if (hitTimer > 0)
