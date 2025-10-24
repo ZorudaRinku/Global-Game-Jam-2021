@@ -29,7 +29,6 @@ public class DeathScreen : MonoBehaviour
         if (deathScreenImage != null)
         {
             deathScreenImage.SetActive(true);
-            deathScreenImage.GetComponent<Animator>().SetBool("Dead", true);
         }
     }
 
