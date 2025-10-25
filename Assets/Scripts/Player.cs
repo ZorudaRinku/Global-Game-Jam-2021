@@ -117,5 +117,16 @@ public class Player : MonoBehaviour
 
             collision.gameObject.GetComponent<SlimeEnemy>().bounceback((Vector2)(transform.position - collision.transform.position).normalized);
         }
+
+        if (collision.collider.CompareTag("Boss") && hitTimer <= 0)
+        {
+            hitTimer = 1f; // 1 second invulnerability
+            health -= 1f;
+            //AudioManager.Instance.PlayOneShot(SoundEffect.PlayerHurt);
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
     }
 }

@@ -108,7 +108,7 @@ public class BowAndArrow : MonoBehaviour
 
             if (arrow)
             {
-                arrow.transform.position = new Vector3(this.transform.position.x + offset.x, this.transform.position.y + offset.y, this.transform.position.z);
+                arrow.transform.position = new Vector3(this.transform.position.x + offset.x, this.transform.position.y + offset.y, 0);
                 arrow.transform.eulerAngles = new Vector3(arrow.transform.eulerAngles.x, arrow.transform.eulerAngles.y, arrow.transform.eulerAngles.x + rotation);
                 arrow.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(shootX, shootY) * 10f;
                 //Destroy(arrow, 5f);
