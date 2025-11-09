@@ -9,6 +9,7 @@ TagManager:
   - EnemyProjectile
   - Star
   - Boss
+  - Room
   layers:
   - Default
   - TransparentFX

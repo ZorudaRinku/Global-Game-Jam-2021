@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public Sprite[] Images;
 
     private Vector2 lastDirection = Vector2.down; // Default facing direction
+    public GameObject currentRoom;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +101,11 @@ public class Player : MonoBehaviour
             {
                 Die();
             }
+        }
+
+        if (other.gameObject.CompareTag("Room"))
+        {
+            currentRoom = other.gameObject;
         }
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    [SerializeField] private Transform target;
+    [SerializeField] private Player player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,11 +13,10 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+        if (player != null && player.currentRoom != null)
         {
-            Vector3 newPosition = target.position;
-            newPosition.z = transform.position.z; // Maintain the camera's z position
-            transform.position = newPosition;
+            Vector3 targetPosition = new Vector3(player.currentRoom.transform.position.x, player.currentRoom.transform.position.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10f);
         }
     }
 }
